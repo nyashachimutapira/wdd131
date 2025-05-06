@@ -1,14 +1,62 @@
 <!DOCTYPE html>
-<html lang="en"></html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Web Page</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Nyasha Chimutapira. Course home page featuring web development projects and resources.">
+    <meta name="author" content="Nyasha Chimutapira">
+    <title>WDD 131 - Dynamic Web Fundamentals - Nyasha Chimutapira</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&family=Lora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-    <h1>WDD 131 - NYASHA CHIMUTAPIRA</h1>
-    </body>
-    </html>
+    <header>
+        <h1>WDD 131 - Dynamic Web Fundamentals</h1>
+        <nav>
+            <ul>
+                <li><a href="https://linkedin.com/in/nyashachimutapira">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/">Canvas</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7">Scripture</a></li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
     
+    <main>
+        <section class="card">
+            <h2>About Me</h2>
+            <div class="content">
+                <img src="images/profile.jpg" alt="Nyasha Chimutapira" width="150">
+                <p>My name is Nyasha Chimutapira, a web development student from Gweru, Zimbabwe. I love creating interactive websites and learning new technologies.</p>
+            </div>
+            <div class="flag">
+                <img src="images/flag.jpg" alt="Zimbabwe Flag" width="150">
+                <p>Zimbabwe is a landlocked country located in Southern Africa, known for its diverse wildlife and rich cultural heritage. It is home to the majestic Victoria Falls and the ancient ruins of Great Zimbabwe, reflecting its historical significance.</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Web Dev Resources</h2>
+            <div class="content">
+                <ul>
+                    <li><a href="https://developer.mozilla.org">MDN Web Docs</a></li>
+                    <li><a href="https://w3schools.com">W3Schools</a></li>
+                    <li><a href="https://codepen.io">CodePen</a></li>
+                    <li><a href="https://udemy.com">Udemy</a></li>
+                    <li><a href="https://smashingmagazine.com">Smashing Magazine</a></li>
+                    <li><a href="https://css-tricks.com">CSS-Tricks</a></li>
+                    <li><a href="https://dev.to-community.com">Dev.to Community</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Nyasha Chimutapira - Gweru, Zimbabwe</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
