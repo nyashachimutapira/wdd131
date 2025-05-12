@@ -1,0 +1,27 @@
+@media (min-width: 768px) {
+  /* Header Navigation */
+  .nav-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    position: static;
+    box-shadow: none;
+    background: none;
+    padding: 0;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  /* Grid Layout for Album */
+  .album {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  figure img {
+    max-width: 100%;
+    height: auto;
+  }
+}
