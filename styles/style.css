@@ -1,0 +1,94 @@
+:root {
+    --primary-color: #008C4E; /* Zimbabwe flag green */
+    --secondary-color: #FFD700; /* Gold for contrast */
+    --background-color: #f4f4f4; /* Light background */
+    --text-color: #333; /* Dark text for readability */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 2rem;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.hero {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.hero img {
+    width: 80%; /* Reduced image size */
+    height: auto;
+    max-width: 800px; /* Limit max width */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.info {
+    background-color: white;
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 600px; /* Center info section */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.info h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.weather {
+    background-color: white;
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 600px; /* Center weather section */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    position: relative;
+}
+
+@media (max-width: 600px) {
+    .weather-icon {
+        display: none; /* Hide icon in mobile view */
+    }
+}
+
+@media (min-width: 601px) {
+    .weather-icon::after {
+        content: "⛅"; /* Pseudo element for weather icon */
+    }
+}
