@@ -1,0 +1,211 @@
+/* styles/place.css */
+
+:root {
+    /* Zimbabwe Flag Inspired Colors */
+    --primary-green: #323a35;
+    --primary-yellow: #FCE300;
+    --primary-red: #DE242A;
+    --primary-black: #2C2A29; /* Slightly softer black for text */
+    --primary-white: #FFFFFF;
+
+    /* Neutral & Utility Colors */
+    --background-light: #F4F4F4;
+    --card-background: var(--primary-white);
+    --text-color-dark: var(--primary-black);
+    --text-color-light: var(--primary-white);
+    --border-color: #E0E0E0;
+
+    /* Typography */
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Lato', sans-serif;
+
+    /* Spacing & Shadows */
+    --spacing-unit: 1rem; /* 16px */
+    --card-padding: calc(var(--spacing-unit) * 1.5);
+    --section-gap: calc(var(--spacing-unit) * 2);
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+}
+
+/* Global Resets & Base Styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--text-color-dark);
+    background-color: var(--background-light);
+    font-size: 16px; /* Base font size */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-green);
+    color: var(--text-color-light);
+    padding: var(--spacing-unit) 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(1.8rem, 5vw, 2.5rem); /* Responsive font size */
+}
+
+/* Main Content Area */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--section-gap) var(--spacing-unit);
+}
+
+/* Hero Section */
+.hero-section {
+    margin-bottom: var(--section-gap);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    overflow: hidden; /* Ensures image respects border-radius */
+}
+
+.hero-section img {
+    width: 100%;
+    object-fit: cover;
+    min-height: 250px; /* Minimum height for hero image */
+    max-height: 50vh; /* Maximum height relative to viewport */
+}
+
+/* Content Grid for Data and Weather */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column by default for mobile */
+    gap: var(--section-gap);
+}
+
+/* Data and Weather Cards */
+.data-card,
+.weather-card {
+    background-color: var(--card-background);
+    padding: var(--card-padding);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.data-card h2,
+.weather-card h2 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--primary-red);
+    margin-bottom: var(--spacing-unit);
+    padding-bottom: calc(var(--spacing-unit) / 2);
+    border-bottom: 2px solid var(--primary-yellow);
+    font-size: clamp(1.3rem, 4vw, 1.7rem);
+}
+
+/* Data Section (dl, dt, dd) */
+.data-card dl div {
+    display: flex;
+    justify-content: space-between;
+    padding: calc(var(--spacing-unit) / 2) 0;
+    border-bottom: 1px solid var(--border-color);
+}
+.data-card dl div:last-child {
+    border-bottom: none;
+}
+.data-card dt {
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-right: var(--spacing-unit);
+    flex-basis: 40%; /* Give some fixed basis for alignment */
+}
+.data-card dd {
+    text-align: right;
+    flex-basis: 60%;
+}
+
+/* Weather Section */
+.weather-heading {
+    display: flex;
+    align-items: center;
+}
+
+.weather-icon-mobile {
+    width: 36px; /* Adjust size as needed */
+    height: 36px;
+    margin-right: calc(var(--spacing-unit) / 2);
+}
+
+.weather-info p {
+    padding: calc(var(--spacing-unit) / 3) 0;
+    display: flex;
+    justify-content: space-between;
+}
+.weather-info p strong {
+    color: var(--primary-green);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-black);
+    color: var(--text-color-light);
+    text-align: center;
+    padding: var(--card-padding) var(--spacing-unit);
+    margin-top: var(--section-gap);
+    font-size: 0.9rem;
+}
+footer p {
+    margin-bottom: calc(var(--spacing-unit) / 3);
+}
+footer p:last-child {
+    margin-bottom: 0;
+}
+
+/* --- Media Queries --- */
+
+/* For tablets and wider mobile views (e.g., landscape) */
+@media (min-width: 600px) {
+    .hero-section img {
+        min-height: 300px;
+    }
+}
+
+/* For small desktop screens and large tablets */
+@media (min-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr 1fr; /* Two columns */
+        align-items: start; /* Align items to the top of their grid cell */
+    }
+
+    .weather-icon-mobile {
+        display: none; /* Hide mobile SVG icon */
+    }
+
+    .weather-heading::after {
+        content: " ⛅"; /* Weather emoticon for wider views */
+        font-size: 1.2em; /* Adjust size as needed */
+        margin-left: 0.5em;
+        color: var(--primary-yellow); /* Color for the emoticon if possible/needed */
+    }
+}
+
+/* For larger desktop screens */
+@media (min-width: 1024px) {
+    body {
+        font-size: 17px; /* Slightly larger base font */
+    }
+    main {
+        padding: calc(var(--section-gap) * 1.5) var(--spacing-unit);
+    }
+}

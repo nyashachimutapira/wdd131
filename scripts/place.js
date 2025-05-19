@@ -1,38 +1,42 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const temperature = 10; // static temperature in °C
-    const windSpeed = 5; // static wind speed in km/h
+// scripts/place.js
 
-    function calculateWindChill(temp, speed) {
-        return (temp <= 10 && speed > 4.8) 
-            ? Math.round(13.12 + 0.6215 * temp - 35.75 * Math.pow(speed, 0.16) + 0.4275 * temp * Math.pow(speed, 0.16)) 
-            : "N/A";
+document.addEventListener('DOMContentLoaded', function() {
+    // Update footer year
+    const currentYearSpan = document.getElementById('currentyear');
+    if (currentYearSpan) {
+        currentYearSpan.textContent = new Date().getFullYear();
     }
 
-    const windChill = calculateWindChill(temperature, windSpeed);
-    document.getElementById("wind-chill").textContent = windChill;
+    // Update last modified date
+    const lastModifiedSpan = document.getElementById('lastmodified');
+    if (lastModifiedSpan) {
+        lastModifiedSpan.textContent = document.lastModified;
+    }
 
-    // Set current year and last modified date
-    const currentYear = new Date().getFullYear();
-    document.getElementById("current-year").textContent = currentYear;
-    document.getElementById("last-modified").textContent = document.lastModified;
+    // Weather Data (Static values as per instructions)
+    const temperatureCelsius = parseFloat(document.getElementById('temperature').textContent); // 10°C
+    const windSpeedKmh = parseFloat(document.getElementById('windspeed').textContent); // 15 km/h
 
-    // Display temperature and wind speed
-    document.getElementById("temperature").textContent = `${temperature}°C`;
-    document.getElementById("wind-speed").textContent = `${windSpeed} km/h`;
+    const windChillSpan = document.getElementById('windchill');
 
-    // Greeting based on time of day
-    const greetingElement = document.createElement('p');
-    const currentHour = new Date().getHours();
-    let greeting;
+    // Function to calculate Wind Chill in Celsius
+    // Wind Chill = 13.12 + 0.6215*T - 11.37*V^0.16 + 0.3965*T*V^0.16
+    // T = Air Temperature in Celsius
+    // V = Wind Speed in km/h
+    function calculateWindChill(tempCelsius, speedKmh) {
+        return (13.12 + (0.6215 * tempCelsius) - (11.37 * Math.pow(speedKmh, 0.16)) + (0.3965 * tempCelsius * Math.pow(speedKmh, 0.16))).toFixed(1);
+    }
 
-    if (currentHour < 12) {
-        greeting = "Good morning! Enjoy your day in Zimbabwe!";
-    } else if (currentHour < 18) {
-        greeting = "Good afternoon! Hope you're having a great day!";
+    // Check conditions for calculating wind chill
+    // Metric: Temperature <= 10 °C AND Wind speed > 4.8 km/h
+    if (temperatureCelsius <= 10 && windSpeedKmh > 4.8) {
+        const windChillValue = calculateWindChill(temperatureCelsius, windSpeedKmh);
+        if (windChillSpan) {
+            windChillSpan.textContent = `${windChillValue}°C`;
+        }
     } else {
-        greeting = "Good evening! Relax and enjoy the beautiful sights of Zimbabwe!";
+        if (windChillSpan) {
+            windChillSpan.textContent = "N/A";
+        }
     }
-
-    greetingElement.textContent = greeting;
-    document.body.insertBefore(greetingElement, document.querySelector("footer"));
 });
