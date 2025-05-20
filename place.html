@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore Zimbabwe</title>
-    <meta name="description" content="Discover the beauty and key information about Zimbabwe.">
-    <meta name="author" content="Your Name / AI Web Developer">
+    <title>Explore Zimbabwe - Revised</title>
+    <meta name="description" content="Discover the beauty and key information about Zimbabwe, with optimized features.">
+    <meta name="author" content="Nyasha Chimutapira">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,16 +22,14 @@
     <main>
         <div class="hero-section">
             <picture>
-                <!-- IMPORTANT: Create an 'images' folder in the same directory as place.html -->
-                <!-- Then, place your zimbabwe-hero-large.webp and zimbabwe-hero-small.webp inside it -->
                 <source media="(min-width: 700px)" srcset="images/zimbabwe.jpg">
-                <img src="images/zimbabwe.jpg" alt="Scenic landscape of Zimbabwe">
+                <img src="images/zimbabwe-hero-small.webp" alt="Scenic landscape of Zimbabwe" loading="lazy">
             </picture>
         </div>
 
         <div class="content-grid">
             <section class="data-card">
-                <h2>Data</h2>
+                <h2>Data Snapshot</h2>
                 <dl>
                     <div>
                         <dt>Area:</dt>
@@ -39,7 +37,7 @@
                     </div>
                     <div>
                         <dt>Population:</dt>
-                        <dd>Approximately 15.5 million</dd>
+                        <dd>~15.5 million</dd>
                     </div>
                     <div>
                         <dt>Capital:</dt>
@@ -47,15 +45,15 @@
                     </div>
                     <div>
                         <dt>Languages:</dt>
-                        <dd>English, Shona, Ndebele, & 13 other official languages</dd>
+                        <dd>English, Shona, Ndebele, &amp; 13 others</dd>
                     </div>
                     <div>
                         <dt>Currency:</dt>
-                        <dd>Zimbabwean Dollar (ZWL), USD often used</dd>
+                        <dd>Zimbabwean Dollar (ZWL), USD</dd>
                     </div>
                     <div>
                         <dt>Time Zone:</dt>
-                        <dd>Central Africa Time (CAT), UTC+2</dd>
+                        <dd>CAT (UTC+2)</dd>
                     </div>
                     <div>
                         <dt>Calling Code:</dt>
@@ -70,27 +68,26 @@
 
             <section class="weather-card">
                 <h2 class="weather-heading">
-                    <!-- Mobile SVG Icon -->
-                    <svg class="weather-icon-mobile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="48" height="48" aria-hidden="true">
-                        <path d="M47.2 30.9A12.5 12.5 0 0048 28a12 12 0 00-23.3-5.4A10 10 0 006 28a10.1 10.1 0 0010 10h30a8 8 0 001.2-15.9z" fill="#f0e68c"/>
-                        <path d="M55 22a11 11 0 00-20-7.6 11 11 0 00-18 9.6h38a11 11 0 000-2z" fill="#73b4c8" opacity=".5" transform="translate(0 -3)"/>
+                    <svg class="weather-icon-mobile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+                        
+                        <path d="M47.2,30.9A12.5,12.5,0,0,0,48,28,12,12,0,0,0,24.7,18.6a10,10,0,0,0-18.7,9.4A10.1,10.1,0,0,0,16,38H46a8,8,0,0,0,1.2-15.9Z" fill="#cccccc"/>
                         <circle cx="28" cy="20" r="7" fill="#FFD700"/>
-                         <!-- Simplified partly cloudy icon -->
+                        <path d="M46,38H16a10,10,0,0,0,0,2H46a8,8,0,0,0,0-2Z" fill="#b0b0b0"/>
                     </svg>
                     Weather
                 </h2>
                 <div class="weather-info">
-                    <p><strong>Temperature:</strong> <span id="temperature">10</span>°C</p>
+                    <p><strong>Temperature:</strong> <span id="temperature-value">10</span>°C</p>
                     <p><strong>Conditions:</strong> Partly Cloudy</p>
-                    <p><strong>Wind:</strong> <span id="windspeed">15</span> km/h</p>
-                    <p><strong>Wind Chill:</strong> <span id="windchill">N/A</span></p>
+                    <p><strong>Wind:</strong> <span id="windspeed-value">15</span> km/h</p>
+                    <p><strong>Wind Chill:</strong> <span id="windchill-value">N/A</span></p>
                 </div>
             </section>
         </div>
     </main>
 
     <footer>
-        <p>&copy;<span id="currentyear"></span> Nyasha Chimutapira |WDD 131. Zimbabwe Showcase.</p>
+        <p>&copy;<span id="currentyear"></span> Nyasha Chimutapira | WDD 131 - Zimbabwe Showcase.</p>
         <p>Last Modification: <span id="lastmodified"></span></p>
     </footer>
 </body>

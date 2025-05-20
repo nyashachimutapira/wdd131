@@ -1,30 +1,31 @@
 /* styles/place.css */
 
 :root {
-    /* Zimbabwe Flag Inspired Colors */
-    --primary-green: #323a35;
+    /* Zimbabwe Flag Inspired Colors - Ensuring Contrast */
+    --primary-green: #313533; /* Darker green for better contrast */
     --primary-yellow: #FCE300;
-    --primary-red: #DE242A;
-    --primary-black: #2C2A29; /* Slightly softer black for text */
+    --primary-red: #D80000; /* Slightly darker red */
+    --primary-black: #1A1A1A; /* True black for text on light bg */
     --primary-white: #FFFFFF;
 
     /* Neutral & Utility Colors */
-    --background-light: #F4F4F4;
+    --background-light: #F8F9FA; /* Very light gray for subtle depth */
     --card-background: var(--primary-white);
     --text-color-dark: var(--primary-black);
     --text-color-light: var(--primary-white);
-    --border-color: #E0E0E0;
+    --text-color-medium: #495057; /* For less prominent text */
+    --border-color: #DEE2E6;
 
     /* Typography */
-    --font-heading: 'Montserrat', sans-serif;
-    --font-body: 'Lato', sans-serif;
+    --font-heading: 'Montserrat', Arial, sans-serif;
+    --font-body: 'Lato', Arial, sans-serif;
 
     /* Spacing & Shadows */
     --spacing-unit: 1rem; /* 16px */
-    --card-padding: calc(var(--spacing-unit) * 1.5);
+    --card-padding: calc(var(--spacing-unit) * 1.25);
     --section-gap: calc(var(--spacing-unit) * 2);
-    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    --border-radius: 8px;
+    --box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08); /* Softer shadow */
+    --border-radius: 6px; /* Slightly softer radius */
 }
 
 /* Global Resets & Base Styles */
@@ -36,15 +37,21 @@
     padding: 0;
 }
 
-body {
-    font-family: var(--font-body);
-    line-height: 1.6;
-    color: var(--text-color-dark);
-    background-color: var(--background-light);
-    font-size: 16px; /* Base font size */
+html {
+    scroll-behavior: smooth;
 }
 
-img {
+body {
+    font-family: var(--font-body);
+    line-height: 1.7;
+    color: var(--text-color-dark);
+    background-color: var(--background-light);
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img, svg {
     max-width: 100%;
     height: auto;
     display: block;
@@ -54,20 +61,20 @@ img {
 header {
     background-color: var(--primary-green);
     color: var(--text-color-light);
-    padding: var(--spacing-unit) 0;
+    padding: var(--spacing-unit) var(--spacing-unit);
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 header h1 {
     font-family: var(--font-heading);
     font-weight: 700;
-    font-size: clamp(1.8rem, 5vw, 2.5rem); /* Responsive font size */
+    font-size: clamp(1.7rem, 4vw, 2.2rem);
 }
 
 /* Main Content Area */
 main {
-    max-width: 1200px;
+    max-width: 1100px; /* Slightly adjusted max-width */
     margin: 0 auto;
     padding: var(--section-gap) var(--spacing-unit);
 }
@@ -75,22 +82,23 @@ main {
 /* Hero Section */
 .hero-section {
     margin-bottom: var(--section-gap);
-    box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
-    overflow: hidden; /* Ensures image respects border-radius */
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
 }
 
 .hero-section img {
     width: 100%;
     object-fit: cover;
-    min-height: 250px; /* Minimum height for hero image */
-    max-height: 50vh; /* Maximum height relative to viewport */
+    min-height: 280px;
+    max-height: 55vh;
+    background-color: #e0e0e0; /* Placeholder bg while image loads */
 }
 
 /* Content Grid for Data and Weather */
 .content-grid {
     display: grid;
-    grid-template-columns: 1fr; /* Single column by default for mobile */
+    grid-template-columns: 1fr;
     gap: var(--section-gap);
 }
 
@@ -101,6 +109,7 @@ main {
     padding: var(--card-padding);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
+    border: 1px solid var(--border-color);
 }
 
 .data-card h2,
@@ -109,17 +118,21 @@ main {
     font-weight: 600;
     color: var(--primary-red);
     margin-bottom: var(--spacing-unit);
-    padding-bottom: calc(var(--spacing-unit) / 2);
+    padding-bottom: calc(var(--spacing-unit) / 2.5);
     border-bottom: 2px solid var(--primary-yellow);
-    font-size: clamp(1.3rem, 4vw, 1.7rem);
+    font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+    display: flex; /* For icon alignment */
+    align-items: center; /* For icon alignment */
 }
 
 /* Data Section (dl, dt, dd) */
 .data-card dl div {
     display: flex;
     justify-content: space-between;
-    padding: calc(var(--spacing-unit) / 2) 0;
+    align-items: baseline;
+    padding: calc(var(--spacing-unit) / 2.5) 0;
     border-bottom: 1px solid var(--border-color);
+    font-size: 0.95rem;
 }
 .data-card dl div:last-child {
     border-bottom: none;
@@ -128,32 +141,36 @@ main {
     font-weight: 700;
     color: var(--primary-green);
     margin-right: var(--spacing-unit);
-    flex-basis: 40%; /* Give some fixed basis for alignment */
+    flex-shrink: 0; /* Prevent dt from shrinking too much */
 }
 .data-card dd {
     text-align: right;
-    flex-basis: 60%;
+    color: var(--text-color-medium);
 }
 
 /* Weather Section */
-.weather-heading {
-    display: flex;
-    align-items: center;
+.weather-icon-mobile {
+    width: 32px;
+    height: 32px;
+    margin-right: calc(var(--spacing-unit) / 1.5);
+    fill: var(--primary-yellow); /* Color for the sun part of SVG */
+}
+.weather-icon-mobile path[fill="#cccccc"],
+.weather-icon-mobile path[fill="#b0b0b0"] {
+    fill: var(--text-color-medium); /* Color for cloud part of SVG */
 }
 
-.weather-icon-mobile {
-    width: 36px; /* Adjust size as needed */
-    height: 36px;
-    margin-right: calc(var(--spacing-unit) / 2);
-}
 
 .weather-info p {
-    padding: calc(var(--spacing-unit) / 3) 0;
+    padding: calc(var(--spacing-unit) / 3.5) 0;
     display: flex;
     justify-content: space-between;
+    font-size: 0.95rem;
+    color: var(--text-color-medium);
 }
 .weather-info p strong {
-    color: var(--primary-green);
+    color: var(--text-color-dark);
+    margin-right: 0.5em;
 }
 
 /* Footer */
@@ -162,11 +179,12 @@ footer {
     color: var(--text-color-light);
     text-align: center;
     padding: var(--card-padding) var(--spacing-unit);
-    margin-top: var(--section-gap);
-    font-size: 0.9rem;
+    margin-top: calc(var(--section-gap) * 1.5);
+    font-size: 0.85rem;
 }
 footer p {
-    margin-bottom: calc(var(--spacing-unit) / 3);
+    margin-bottom: calc(var(--spacing-unit) / 3.5);
+    opacity: 0.9;
 }
 footer p:last-child {
     margin-bottom: 0;
@@ -174,38 +192,30 @@ footer p:last-child {
 
 /* --- Media Queries --- */
 
-/* For tablets and wider mobile views (e.g., landscape) */
-@media (min-width: 600px) {
-    .hero-section img {
-        min-height: 300px;
-    }
-}
-
-/* For small desktop screens and large tablets */
-@media (min-width: 768px) {
+@media (min-width: 700px) { /* Aligns with hero image breakpoint */
     .content-grid {
-        grid-template-columns: 1fr 1fr; /* Two columns */
-        align-items: start; /* Align items to the top of their grid cell */
+        grid-template-columns: 1fr 1fr;
+        align-items: flex-start; /* Align cards to the top */
     }
 
     .weather-icon-mobile {
-        display: none; /* Hide mobile SVG icon */
+        display: none; /* Hide mobile SVG icon on wider screens */
     }
 
     .weather-heading::after {
         content: " ⛅"; /* Weather emoticon for wider views */
-        font-size: 1.2em; /* Adjust size as needed */
-        margin-left: 0.5em;
-        color: var(--primary-yellow); /* Color for the emoticon if possible/needed */
+        font-size: 1.3em;
+        margin-left: 0.4em;
+        /* Color for emoticon is inherited or can be set if needed,
+           but emoticons usually take the text color. */
     }
 }
 
-/* For larger desktop screens */
 @media (min-width: 1024px) {
     body {
-        font-size: 17px; /* Slightly larger base font */
+        font-size: 17px;
     }
     main {
-        padding: calc(var(--section-gap) * 1.5) var(--spacing-unit);
+        padding: calc(var(--section-gap) * 1.25) var(--spacing-unit);
     }
 }
