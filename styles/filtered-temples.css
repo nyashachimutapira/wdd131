@@ -1,0 +1,168 @@
+/* filtered-temples.css */
+:root {
+    --primary-color: #003366; /* Deep Blue */
+    --secondary-color: #EAEAEA; /* Light Gray */
+    --accent-color: #D4AF37; /* Gold */
+    --text-color: #333333;
+    --light-text-color: #FFFFFF;
+    --card-background: #FFFFFF;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+
+    --font-heading: 'Merriweather', serif;
+    --font-body: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    margin: 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+header h1 {
+    font-family: var(--font-heading);
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+.main-navigation ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0.5rem 0 0 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.main-navigation li {
+    margin: 0.3rem 0.5rem;
+}
+
+.nav-link {
+    color: var(--light-text-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: 400;
+    border: 1px solid transparent;
+}
+
+.nav-link:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border-color: var(--accent-color);
+}
+
+.nav-link.active {
+    background-color: var(--light-text-color);
+    color: var(--primary-color);
+    font-weight: bold;
+    border-color: var(--primary-color);
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+#page-title {
+    font-family: var(--font-heading);
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.temple-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.temple-card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    overflow: hidden; /* Ensures image border-radius is respected */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.temple-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.temple-card img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Crop image to fit, maintaining aspect ratio */
+}
+
+.temple-card-info {
+    padding: 1rem;
+    flex-grow: 1; /* Allows info to take remaining space */
+    display: flex;
+    flex-direction: column;
+}
+
+.temple-card-info h3 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin: 0 0 0.5rem 0;
+}
+
+.temple-card-info p {
+    font-size: 0.9rem;
+    margin: 0.25rem 0;
+    color: #555;
+}
+
+.temple-card-info p strong {
+    color: var(--text-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.25rem 0;
+}
+
+/* Responsive adjustments for navigation if needed */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    .main-navigation li {
+        margin: 0.2rem 0.3rem; /* Slightly smaller margins for nav items */
+    }
+    .nav-link {
+        padding: 0.4rem 0.8rem; /* Slightly smaller padding */
+    }
+    #page-title {
+        font-size: 1.5rem;
+    }
+    .temple-gallery-grid {
+        grid-template-columns: 1fr; /* Stack cards on very small screens */
+    }
+}

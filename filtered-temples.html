@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album - Enhanced Filtering</title>
+    <meta name="description" content="An enhanced album of temples of The Church of Jesus Christ of Latter-day Saints, featuring dynamic loading and filtering.">
+    <meta name="author" content="Nyasha Chimutapira">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+</head>
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="#" id="nav-home" class="nav-link active">Home</a></li>
+                <li><a href="#" id="nav-old" class="nav-link">Old</a></li>
+                <li><a href="#" id="nav-new" class="nav-link">New</a></li>
+                <li><a href="#" id="nav-large" class="nav-link">Large</a></li>
+                <li><a href="#" id="nav-small" class="nav-link">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 id="page-title">All Temples</h2>
+        <div class="temple-gallery-grid">
+            <!-- Temple cards will be dynamically inserted here by JavaScript -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> Nyasha Chimutapira | Temple Album Project</p>
+        <p>Last Modification: <span id="lastmodified"></span></p>
+    </footer>
+
+    <script src="scripts/filtered-temples.js"></script>
+</body>
+</html>
