@@ -1,0 +1,332 @@
+/* General Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.7;
+    color: #343A40; /* Text Dark */
+    background-color: #FFFFFF; /* Background White */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    color: #0077B6; /* Primary Deep Cerulean Blue */
+    margin-bottom: 0.75em;
+}
+
+h1 { font-size: 2.8em; font-weight: 900; line-height: 1.2; }
+h2 { font-size: 2.2em; }
+h3 { font-size: 1.5em; color: #343A40; } /* Darker for subheadings within sections */
+
+p {
+    margin-bottom: 1em;
+    font-size: 1em;
+}
+
+a {
+    color: #F4A261; /* Accent Warm Orange */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover, a:focus {
+    color: #E76F51; /* Darker orange for hover */
+    text-decoration: underline;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Header & Navigation */
+.site-header {
+    background-color: #0077B6; /* Primary Deep Cerulean Blue */
+    color: #FFFFFF; /* Text Light */
+    padding: 1em 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.8em;
+    font-weight: 900;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.logo:hover {
+    color: #90E0EF; /* Secondary Light Sky Blue */
+    text-decoration: none;
+}
+
+.primary-navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5em;
+}
+
+.primary-navigation a {
+    color: #FFFFFF;
+    font-weight: 600;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1em;
+    padding: 0.5em 0;
+    border-bottom: 2px solid transparent;
+}
+
+.primary-navigation a:hover,
+.primary-navigation a.active {
+    color: #90E0EF; /* Secondary Light Sky Blue */
+    text-decoration: none;
+    border-bottom-color: #90E0EF;
+}
+
+.mobile-nav-toggle {
+    display: none; /* Hidden by default, shown on mobile */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8em;
+    cursor: pointer;
+}
+
+
+/* Hero Section */
+#hero {
+    background-color: #90E0EF; /* Secondary Light Sky Blue */
+    color: #003B5C; /* Darker blue text for contrast */
+    padding: 4em 0;
+    text-align: center;
+}
+#hero h1 { color: #003B5C; }
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #F4A261; /* Accent Warm Orange */
+    color: #FFFFFF;
+    padding: 0.8em 1.8em;
+    border-radius: 25px;
+    font-weight: 700;
+    font-family: 'Nunito Sans', sans-serif;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.1em;
+    border: 2px solid #F4A261;
+}
+
+.cta-button:hover {
+    background-color: #E76F51; /* Darker orange */
+    color: #FFFFFF;
+    text-decoration: none;
+    transform: translateY(-2px);
+    border-color: #E76F51;
+}
+
+.cta-button-secondary {
+    display: inline-block;
+    background-color: transparent;
+    color: #0077B6; /* Primary Deep Cerulean Blue */
+    padding: 0.7em 1.5em;
+    border-radius: 25px;
+    font-weight: 700;
+    font-family: 'Nunito Sans', sans-serif;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 2px solid #0077B6;
+    font-size: 1em;
+}
+
+.cta-button-secondary:hover {
+    background-color: #0077B6;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* General Section Styling */
+main section {
+    padding: 3em 0;
+}
+main section:nth-child(even) { /* Alternating background for sections */
+     background-color: #F8F9FA; /* Background Light */
+}
+.text-center {
+    text-align: center;
+}
+.section-title {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+/* Event Grid */
+.event-grid, .spotlight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2em;
+    margin-bottom: 2em;
+}
+
+.event-card, .spotlight-card {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.event-card:hover, .spotlight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.event-image-placeholder, .spotlight-image-placeholder {
+    height: 200px;
+    background-color: #CAF0F8; /* Lighter Sky Blue for placeholder */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0077B6;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+}
+.event-card-content, .spotlight-card-content {
+    padding: 1.5em;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.event-card h3, .spotlight-card h3 { margin-top: 0; font-size: 1.3em; }
+.event-date {
+    font-size: 0.9em;
+    color: #0077B6; /* Primary Deep Cerulean Blue */
+    font-weight: 600;
+    margin-bottom: 0.5em;
+}
+.learn-more {
+    margin-top: auto; /* Pushes button to bottom of card */
+    align-self: flex-start; /* Aligns button to left */
+    font-weight: 600;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+/* Get Involved Section */
+.involvement-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2em;
+    text-align: center;
+}
+.involvement-options .option {
+    background-color: #FFFFFF;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.involvement-options .option h3 {
+    color: #0077B6; /* Primary Deep Cerulean Blue */
+}
+
+
+/* Footer */
+.site-footer {
+    background-color: #343A40; /* Text Dark (as footer bg) */
+    color: #F8F9FA; /* Background Light (as footer text) */
+    padding: 2em 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+.site-footer p { margin-bottom: 0.5em; }
+.site-footer a {
+    color: #90E0EF; /* Secondary Light Sky Blue */
+}
+.site-footer a:hover {
+    color: #FFFFFF;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    h1 { font-size: 2.2em; }
+    h2 { font-size: 1.8em; }
+
+    .primary-navigation {
+        position: fixed;
+        inset: 0 0 0 30%; /* Slide in from right */
+        flex-direction: column;
+        padding: min(20vh, 10rem) 2em;
+        gap: 2em;
+        background-color: rgba(0, 119, 182, 0.95); /* Semi-transparent Primary Blue */
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        transform: translateX(100%);
+        transition: transform 350ms ease-out;
+    }
+
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0%);
+    }
+    
+    .primary-navigation ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: relative; /* For z-index if needed */
+        z-index: 9999; /* Ensure it's above the nav */
+    }
+    
+    .mobile-nav-toggle .icon-menu { display: block; }
+    .mobile-nav-toggle .icon-close { display: none; }
+    .mobile-nav-toggle[aria-expanded="true"] .icon-menu { display: none; }
+    .mobile-nav-toggle[aria-expanded="true"] .icon-close { display: block; }
+
+    #hero { padding: 3em 0; }
+    #hero p { font-size: 1.1em; }
+
+    .event-grid, .spotlight-grid, .involvement-options {
+        grid-template-columns: 1fr; /* Stack on mobile */
+    }
+}
+
+/* Screen reader only text */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
