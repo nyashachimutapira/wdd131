@@ -1,0 +1,152 @@
+/* styles/spotlights.css - Page-specific styles for Community Spotlights page */
+
+#page-header-spotlights {
+    background-color: #2A9D8F; /* A calming teal for spotlights header */
+    color: #FFFFFF;
+    padding: 3em 0;
+    text-align: center;
+}
+
+#page-header-spotlights h1 {
+    color: #FFFFFF;
+    font-size: 2.5em;
+}
+
+#page-header-spotlights p {
+    font-size: 1.1em;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #E0E0E0;
+}
+
+#spotlight-gallery {
+    padding: 3em 0;
+}
+
+/* Filters Toolbar for Spotlights (can reuse some from events if desired, or keep separate) */
+.spotlights-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-bottom: 2.5em;
+    padding: 1.5em;
+    background-color: #F8F9FA;
+    border-radius: 8px;
+    align-items: center;
+}
+/* Using existing .filter-search, .filter-select, .cta-button-small from site.css for inputs/buttons */
+
+
+/* Spotlight List Grid */
+.spotlight-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5em; /* Slightly more gap for spotlights */
+}
+
+.spotlight-item-card {
+    background-color: #FFFFFF;
+    border-radius: 10px; /* Slightly more rounded */
+    box-shadow: 0 5px 22px rgba(0,0,0,0.09);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.spotlight-item-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.13);
+}
+
+.spotlight-item-image {
+    height: 240px; /* Taller image area for spotlights */
+    overflow: hidden;
+}
+
+.spotlight-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.spotlight-item-card:hover .spotlight-item-image img {
+    transform: scale(1.07);
+}
+
+.spotlight-item-content {
+    padding: 1.8em; /* More padding */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.spotlight-category {
+    display: inline-block;
+    background-color: #E9C46A; /* A warm yellow for category tags */
+    color: #343A40;
+    padding: 0.3em 0.8em;
+    border-radius: 15px;
+    font-size: 0.8em;
+    font-weight: 700;
+    font-family: 'Nunito Sans', sans-serif;
+    margin-bottom: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.spotlight-item-content h3 {
+    font-size: 1.45em;
+    margin-top: 0;
+    margin-bottom: 0.5em; /* Tighter margin below h3 */
+    color: #264653; /* Darker teal for titles */
+}
+
+.spotlight-item-content p {
+    font-size: 1em; /* Standard paragraph size */
+    line-height: 1.65;
+    margin-bottom: 1.2em;
+    color: #455A64; /* Softer text color */
+}
+
+.spotlight-item-content .learn-more {
+    margin-top: auto;
+    align-self: flex-start;
+    color: #2A9D8F; /* Match header teal */
+    font-weight: 700;
+}
+.spotlight-item-content .learn-more:hover {
+    color: #E76F51; /* Use existing accent for hover */
+}
+
+/* Pagination for Spotlights (can reuse .pagination from site.css if desired) */
+.spotlights-pagination {
+    margin-top: 3em;
+    text-align: center;
+}
+/* Using existing .pagination styles from site.css */
+
+
+/* Responsive adjustments for spotlight items */
+@media (max-width: 768px) {
+    .spotlights-filter {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .spotlights-filter input[type="text"],
+    .spotlights-filter select,
+    .spotlights-filter .cta-button-small {
+        width: 100%;
+    }
+
+    #page-header-spotlights h1 {
+        font-size: 2em;
+    }
+
+    .spotlight-list-grid {
+        grid-template-columns: 1fr; /* Stack spotlight items on mobile */
+    }
+}

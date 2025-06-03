@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Events Hub - Community Spotlights</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/site.css">
+    <link rel="stylesheet" href="styles/spotlights.css"> <!-- Page-specific CSS -->
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo">Community Hub</a>
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+                <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+                <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+            </button>
+            <nav class="primary-navigation" id="primary-navigation" data-visible="false">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html">Events Calendar</a></li>
+                    <li><a href="#event-listings-page">Event Listings</a></li>
+                    <li><a href="spotlights.html" class="active">Community Spotlights</a></li>
+                    <li><a href="getinvolved.html">Get Involved</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="page-header-spotlights">
+            <div class="container">
+                <h1>Shining a Light on Our Community</h1>
+                <p>Discover the inspiring stories of individuals and organizations making a positive impact right here in our neighborhood.</p>
+            </div>
+        </section>
+
+        <section id="spotlight-gallery">
+            <div class="container">
+                <!-- Filter/Sort Toolbar (Visual Placeholder) -->
+                <div class="filters-toolbar spotlights-filter">
+                    <input type="text" placeholder="Search spotlights..." class="filter-search">
+                    <select class="filter-select" aria-label="Filter by category">
+                        <option value="">All Categories</option>
+                        <option value="individuals">Individuals</option>
+                        <option value="organizations">Organizations</option>
+                        <option value="projects">Projects</option>
+                    </select>
+                    <button class="cta-button-small">Search</button>
+                </div>
+
+                <div class="spotlight-list-grid">
+                    <!-- Spotlight Item 1 (Copied from your homepage for consistency) -->
+                    <article class="spotlight-item-card">
+                        <div class="spotlight-item-image">
+                            <img src="images/hub 6.png" alt="The Local Food Pantry">
+                        </div>
+                        <div class="spotlight-item-content">
+                            <span class="spotlight-category">Organization</span>
+                            <h3>The Local Food Pantry</h3>
+                            <p>Discover the incredible work "The Local Food Pantry" does to support families in our community and how you can help their vital mission.</p>
+                            <a href="#spotlight-detail-food-pantry" class="learn-more">Read Their Story &raquo;</a>
+                        </div>
+                    </article>
+
+                    <!-- Spotlight Item 2 (Copied from your homepage for consistency) -->
+                    <article class="spotlight-item-card">
+                        <div class="spotlight-item-image">
+                            <img src="images/christalia.jpg" alt="Christalia Shumba">
+                        </div>
+                        <div class="spotlight-item-content">
+                            <span class="spotlight-category">Individual</span>
+                            <h3>Meet Christalia Shumba: Volunteer of the Year</h3>
+                            <p>An inspiring individual making a huge impact through her dedication to various local causes and her unwavering community spirit.</p>
+                            <a href="#spotlight-detail-christalia" class="learn-more">Learn About Christalia &raquo;</a>
+                        </div>
+                    </article>
+
+                    <!-- Spotlight Item 3 -->
+                    <article class="spotlight-item-card">
+                        <div class="spotlight-item-image">
+                            <img src="images/garden.jpeg" alt="Community Garden Project">
+                        </div>
+                        <div class="spotlight-item-content">
+                            <span class="spotlight-category">Project</span>
+                            <h3>Green Thumbs: The Community Garden Initiative</h3>
+                            <p>How a small patch of land transformed into a thriving garden, bringing neighbors together and providing fresh produce for all.</p>
+                            <a href="#spotlight-detail-garden" class="learn-more">Explore the Project &raquo;</a>
+                        </div>
+                    </article>
+
+                    <!-- Spotlight Item 4 -->
+                    <article class="spotlight-item-card">
+                        <div class="spotlight-item-image">
+                            <img src="images/artist.jpg" alt="Local Artist at Work">
+                        </div>
+                        <div class="spotlight-item-content">
+                            <span class="spotlight-category">Individual</span>
+                            <h3>The Art of Connection: Susan Chimuti</h3>
+                            <p>Meet Susan, a local painter whose vibrant murals are beautifying our streets and sparking conversations.</p>
+                            <a href="#spotlight-detail-susan" class="learn-more">Discover Her Art &raquo;</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Add more spotlight items as needed -->
+                </div>
+
+                <!-- Placeholder for Pagination -->
+                <nav class="pagination spotlights-pagination" aria-label="Spotlights navigation">
+                    <ul>
+                        <li><a href="#" class="page-link current-page">1</a></li>
+                        <li><a href="#" class="page-link">2</a></li>
+                        <li><a href="#" class="page-link">&raquo;</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Nyasha Chimutapira |WDD 131| Community Events Hub. All rights reserved.</p>
+            <p><a href="#privacy-policy">Privacy Policy</a> | <a href="#terms-of-service">Terms of Service</a> | <a href="#contact-us">Contact Us</a></p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script> <!-- Main site script -->
+    <script src="js/spotlights.js"></script> <!-- Page-specific script -->
+</body>
+</html>

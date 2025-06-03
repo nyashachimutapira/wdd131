@@ -1,0 +1,117 @@
+/* styles/getinvolved.css - Page-specific styles for Get Involved page */
+
+#page-header-getinvolved {
+    background-color: #F4A261; /* Accent Warm Orange for this page header */
+    color: #FFFFFF;
+    padding: 3em 0;
+    text-align: center;
+}
+
+#page-header-getinvolved h1 {
+    color: #FFFFFF;
+    font-size: 2.5em;
+}
+
+#page-header-getinvolved p {
+    font-size: 1.1em;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #FEFBF6; /* Light cream text */
+}
+
+#involvement-details {
+    padding: 3em 0;
+}
+
+.involvement-section {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    align-items: center;
+    gap: 2.5em; /* Increased gap */
+    margin-bottom: 4em; /* Increased bottom margin */
+    padding: 2em;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+}
+
+.involvement-section:last-child {
+    margin-bottom: 0;
+}
+
+/* Alternating layout for visual interest */
+.involvement-section-reverse {
+    flex-direction: row-reverse;
+}
+
+.involvement-image {
+    flex: 1 1 300px; /* Flex basis of 300px, can grow and shrink */
+    min-width: 280px; /* Minimum width before wrapping */
+    border-radius: 8px;
+    overflow: hidden; /* To contain the image within rounded corners */
+}
+
+.involvement-image img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-height: 350px; /* Max height for images */
+    object-fit: cover; /* Cover the area, might crop */
+    display: block;
+    border-radius: 8px; /* Match parent's border-radius */
+}
+
+.involvement-content {
+    flex: 2 1 400px; /* Takes up more space, flex basis 400px */
+}
+
+.involvement-content h2 {
+    font-size: 2em; /* Slightly larger section titles */
+    color: #0077B6; /* Primary Deep Cerulean Blue */
+    margin-bottom: 0.75em;
+}
+
+.involvement-content p {
+    font-size: 1.05em; /* Slightly larger paragraph text */
+    line-height: 1.75;
+    margin-bottom: 1.2em;
+}
+
+.involvement-content .cta-button {
+    margin-top: 1em; /* Space above the button */
+    background-color: #0077B6; /* Use primary blue for these CTAs */
+    border-color: #0077B6;
+}
+.involvement-content .cta-button:hover {
+    background-color: #005A8D; /* Darker primary blue */
+    border-color: #005A8D;
+}
+
+
+/* Responsive adjustments for involvement sections */
+@media (max-width: 768px) {
+    .involvement-section,
+    .involvement-section-reverse {
+        flex-direction: column; /* Stack image and content on mobile */
+        text-align: center; /* Center text for stacked layout */
+    }
+
+    .involvement-content {
+        order: 2; /* Ensure content comes after image if needed, or manage by DOM order */
+    }
+    .involvement-image {
+        order: 1;
+        margin-bottom: 1.5em; /* Add space below image when stacked */
+    }
+
+    .involvement-content .cta-button {
+        display: block; /* Make button full width in stacked mobile view */
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 300px; /* Max width for the button */
+    }
+
+    #page-header-getinvolved h1 {
+        font-size: 2em;
+    }
+}

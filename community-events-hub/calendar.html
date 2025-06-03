@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Events Hub - Events Calendar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/site.css">
+    <link rel="stylesheet" href="styles/calendar.css"> <!-- Page-specific CSS -->
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo">Community Hub</a>
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+                <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+                <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+            </button>
+            <nav class="primary-navigation" id="primary-navigation" data-visible="false">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="calendar.html" class="active">Events Calendar</a></li>
+                    <li><a href="events.html">Event Listings</a></li>
+                    <li><a href="spotlights.html">Community Spotlights</a></li>
+                    <li><a href="getinvolved.html">Get Involved</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="page-header-calendar">
+            <div class="container">
+                <h1>Community Events Calendar</h1>
+                <p>Stay up-to-date with all the happenings in our vibrant community. Plan your schedule and never miss out!</p>
+            </div>
+        </section>
+
+        <section id="calendar-view">
+            <div class="container">
+                <div class="calendar-controls">
+                    <button id="prev-month" class="calendar-nav-button">&laquo; Previous Month</button>
+                    <h2 id="current-month-year">July 2025</h2>
+                    <button id="next-month" class="calendar-nav-button">Next Month &raquo;</button>
+                </div>
+
+                <div class="calendar-grid">
+                    <div class="calendar-header">Sunday</div>
+                    <div class="calendar-header">Monday</div>
+                    <div class="calendar-header">Tuesday</div>
+                    <div class="calendar-header">Wednesday</div>
+                    <div class="calendar-header">Thursday</div>
+                    <div class="calendar-header">Friday</div>
+                    <div class="calendar-header">Saturday</div>
+
+                    <!-- Days of the month - Example for July 2025 -->
+                    <div class="calendar-day other-month"><span>30</span></div>
+                    <div class="calendar-day"><span>1</span></div>
+                    <div class="calendar-day"><span>2</span></div>
+                    <div class="calendar-day"><span>3</span>
+                        <div class="event-indicator" title="Intro to Pottery Workshop"></div>
+                    </div>
+                    <div class="calendar-day"><span>4</span></div>
+                    <div class="calendar-day"><span>5</span>
+                        <div class="event-indicator" title="Town Hall Meeting"></div>
+                    </div>
+                    <div class="calendar-day"><span>6</span></div>
+                    <div class="calendar-day"><span>7</span></div>
+                    <div class="calendar-day"><span>8</span></div>
+                    <div class="calendar-day"><span>9</span></div>
+                    <div class="calendar-day"><span>10</span></div>
+                    <div class="calendar-day"><span>11</span></div>
+                    <div class="calendar-day"><span>12</span>
+                        <div class="event-indicator" title="Weekend Farmers Market"></div>
+                        <div class="event-indicator" title="Charity Fun Run"></div>
+                    </div>
+                    <div class="calendar-day"><span>13</span></div>
+                    <div class="calendar-day"><span>14</span></div>
+                    <div class="calendar-day"><span>15</span></div>
+                    <div class="calendar-day"><span>16</span></div>
+                    <div class="calendar-day"><span>17</span></div>
+                    <div class="calendar-day"><span>18</span></div>
+                    <div class="calendar-day current-day"><span>19</span>
+                         <div class="event-indicator" title="Book Club Meeting"></div>
+                    </div>
+                    <div class="calendar-day"><span>20</span>
+                        <div class="event-indicator" title="Summer Street Fair"></div>
+                    </div>
+                    <div class="calendar-day"><span>21</span></div>
+                    <div class="calendar-day"><span>22</span></div>
+                    <div class="calendar-day"><span>23</span></div>
+                    <div class="calendar-day"><span>24</span>
+                        <div class="event-indicator" title="Tech Workshop: Intro to Coding"></div>
+                    </div>
+                    <div class="calendar-day"><span>25</span></div>
+                    <div class="calendar-day"><span>26</span>
+                         <div class="event-indicator" title="Weekend Farmers Market"></div>
+                    </div>
+                    <div class="calendar-day"><span>27</span></div>
+                    <div class="calendar-day"><span>28</span>
+                        <div class="event-indicator" title="Community Park Cleanup"></div>
+                    </div>
+                    <div class="calendar-day"><span>29</span></div>
+                    <div class="calendar-day"><span>30</span></div>
+                    <div class="calendar-day"><span>31</span></div>
+                    <div class="calendar-day other-month"><span>1</span></div>
+                    <div class="calendar-day other-month"><span>2</span></div>
+                </div>
+
+                <div class="calendar-legend">
+                    <h3>Legend</h3>
+                    <p><span class="event-indicator-legend"></span> Day with event(s)</p>
+                    <p><span class="current-day-legend"></span> Current Day</p>
+                     <a href="events.html" class="cta-button-secondary calendar-list-link">View All Events as List</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Nyasha Chimutapira |WDD 131| Community Events Hub. All rights reserved.</p>
+            <p><a href="#privacy-policy">Privacy Policy</a> | <a href="#terms-of-service">Terms of Service</a> | <a href="#contact-us">Contact Us</a></p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script> <!-- Main site script -->
+    <script src="js/calendar.js"></script> <!-- Page-specific script -->
+</body>
+</html>

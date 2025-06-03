@@ -1,0 +1,208 @@
+/* styles/calendar.css - Page-specific styles for Events Calendar page */
+
+#page-header-calendar {
+    background-color: #0077B6; /* Primary Deep Cerulean Blue */
+    color: #FFFFFF;
+    padding: 3em 0;
+    text-align: center;
+}
+
+#page-header-calendar h1 {
+    color: #FFFFFF;
+    font-size: 2.5em;
+}
+
+#page-header-calendar p {
+    font-size: 1.1em;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #E0E0E0;
+}
+
+#calendar-view {
+    padding: 2.5em 0;
+}
+
+.calendar-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2em;
+    padding: 0 1em; /* Add some padding for smaller screens */
+}
+
+.calendar-controls h2 {
+    font-size: 1.8em;
+    color: #343A40; /* Text Dark */
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.calendar-nav-button {
+    background-color: #F4A261; /* Accent Warm Orange */
+    color: #FFFFFF;
+    border: none;
+    padding: 0.6em 1.2em;
+    border-radius: 20px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.95em;
+}
+
+.calendar-nav-button:hover {
+    background-color: #E76F51; /* Darker orange */
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px; /* Small gap between cells */
+    border: 1px solid #E0E0E0; /* Border around the grid */
+    border-radius: 8px;
+    overflow: hidden; /* To ensure rounded corners clip content */
+    background-color: #FFFFFF;
+}
+
+.calendar-header {
+    background-color: #F8F9FA; /* Background Light */
+    padding: 0.8em 0.5em;
+    text-align: center;
+    font-weight: 700;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #0077B6; /* Primary Deep Cerulean Blue */
+    font-size: 0.95em;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.calendar-day {
+    min-height: 100px; /* Minimum height for day cells */
+    padding: 0.8em;
+    border: 1px solid #F1F1F1; /* Lighter border for individual cells */
+    position: relative; /* For positioning event indicators */
+    background-color: #FFFFFF;
+    transition: background-color 0.2s ease;
+}
+
+.calendar-day:hover {
+    background-color: #FDF8E8; /* Light yellow hover */
+}
+
+.calendar-day span {
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #343A40;
+}
+
+.calendar-day.other-month span {
+    color: #A0A0A0; /* Dim days from other months */
+    font-weight: normal;
+}
+
+.calendar-day.current-day {
+    background-color: #90E0EF; /* Secondary Light Sky Blue */
+    border: 2px solid #0077B6;
+}
+.calendar-day.current-day span {
+    color: #003B5C; /* Darker blue text for contrast */
+    font-weight: 900;
+}
+
+
+.event-indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #F4A261; /* Accent Warm Orange */
+    border-radius: 50%;
+    margin-top: 6px;
+    margin-left: 2px; /* Slight indent */
+    display: inline-block; /* Allow multiple indicators */
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+}
+/* Allow multiple indicators to stack or appear next to each other */
+.calendar-day > .event-indicator + .event-indicator {
+    margin-left: 4px;
+}
+
+
+.calendar-legend {
+    margin-top: 2.5em;
+    padding: 1.5em;
+    background-color: #F8F9FA;
+    border-radius: 8px;
+    text-align: center;
+}
+.calendar-legend h3 {
+    margin-top: 0;
+    margin-bottom: 1em;
+    color: #343A40;
+}
+.calendar-legend p {
+    margin-bottom: 0.5em;
+    font-size: 0.95em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.event-indicator-legend, .current-day-legend {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px; /* Square for legend */
+    margin-right: 8px;
+    display: inline-block;
+}
+.event-indicator-legend {
+    background-color: #F4A261;
+}
+.current-day-legend {
+    background-color: #90E0EF;
+    border: 1px solid #0077B6;
+}
+
+
+/* Responsive adjustments for calendar */
+@media (max-width: 768px) {
+    .calendar-controls {
+        flex-direction: column;
+        gap: 0.8em;
+        margin-bottom: 1.5em;
+    }
+    .calendar-controls h2 {
+        font-size: 1.5em;
+        order: -1; /* Move month/year title above buttons on mobile */
+    }
+    .calendar-nav-button {
+        width: 100%;
+        font-size: 0.9em;
+    }
+
+    .calendar-header {
+        font-size: 0.75em; /* Smaller day names */
+        padding: 0.6em 0.2em;
+    }
+    .calendar-day {
+        min-height: 70px; /* Shorter cells on mobile */
+        padding: 0.5em;
+        font-size: 0.9em; /* Smaller day numbers */
+    }
+    .calendar-day span {
+        font-size: 1em;
+    }
+    .event-indicator {
+        width: 7px;
+        height: 7px;
+        margin-top: 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    .calendar-header {
+        font-size: 0.6em; /* Even smaller for very small screens */
+    }
+     .calendar-day {
+        min-height: 50px;
+    }
+}
