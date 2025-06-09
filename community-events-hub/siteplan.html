@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Planning Document</title>
+    <link rel="stylesheet" href="siteplan.css">
+</head>
+<body>
+    <header>
+        <h1>Website Planning Document</h1>
+    </header>
+
+    <section>
+        <h2>Site Name</h2>
+        <p><strong>Community Events Hub</strong></p>
+        <p>This name reflects a central location for community events, promoting social gatherings and activities in the area.</p>
+        <p><em>Optional domain availability: communityeventshub.org</em></p>
+    </section>
+
+    <section>
+        <h2>Site Purpose</h2>
+        <p>The site serves as a hub for local community events, providing information on upcoming activities, registration forms, and volunteer opportunities.</p>
+    </section>
+
+    <section>
+        <h2>Scenarios</h2>
+        <ul>
+            <li>What events are happening this weekend?</li>
+            <li>How can I volunteer for community activities?</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Color Schema</h2>
+        <p><strong>Primary Color:</strong> <span class="color-sample primary-color"></span> #4a90e2 (used for headings and buttons)</p>
+        <p><strong>Secondary Color:</strong> <span class="color-sample secondary-color"></span> #ffcc00 (used for accents and highlights)</p>
+    </section>
+
+    <section>
+        <h2>Typography</h2>
+        <p><strong>Headings:</strong> <em>Nunito Sans</em> (used for all headings)</p>
+        <p><strong>Body:</strong> <em>Open Sans</em> (used for paragraph text)</p>
+    </section>
+
+    <section id="wireframe">
+        <h2>Wireframe</h2>
+        <h3>Mobile View</h3>
+        <div class="wireframe-mobile">
+            <div class="header">Header</div>
+            <div class="hero">Hero Section</div>
+            <div class="content">
+                <div class="upcoming-events">Upcoming Events</div>
+                <div class="community-spotlights">Community Spotlights</div>
+                <div class="event-listings">Event Listings</div>
+                <div class="get-involved">Get Involved</div>
+            </div>
+            <div class="footer">Footer</div>
+        </div>
+
+        <h3>Desktop View</h3>
+        <div class="wireframe-desktop">
+            <div class="header">Header</div>
+            <div class="hero">Hero Section</div>
+            <div class="content">
+                <div class="sidebar">Sidebar</div>
+                <div class="main-content">
+                    <div class="upcoming-events">Upcoming Events</div>
+                    <div class="community-spotlights">Community Spotlights</div>
+                    <div class="event-listings">Event Listings</div>
+                    <div class="get-involved">Get Involved</div>
+                </div>
+            </div>
+            <div class="footer">Footer</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Nyasha Chimutapira | WDD 131 |</p>
+    </footer>
+
+    <script>
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

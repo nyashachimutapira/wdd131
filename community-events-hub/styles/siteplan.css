@@ -1,0 +1,66 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1 {
+    color: #4a90e2;
+}
+
+h2 {
+    color: #333;
+}
+
+.color-sample {
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.wireframe-mobile, .wireframe-desktop {
+    border: 2px dashed #333;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.header, .hero, .content, .footer {
+    background-color: #e0e0e0;
+    margin: 5px 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.upcoming-events, .community-spotlights, .event-listings, .get-involved {
+    background-color: #ccc;
+    margin: 5px 0;
+    padding: 10px;
+}
+
+.wireframe-desktop {
+    display: flex;
+}
+
+.sidebar {
+    width: 25%;
+    background-color: #d0d0d0;
+    padding: 10px;
+}
+
+.main-content {
+    width: 75%;
+    padding: 10px;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+}
