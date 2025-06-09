@@ -1,0 +1,167 @@
+/* styles/form.css - Styles for Product Review Form and Confirmation Page */
+
+.form-container {
+    max-width: 700px;
+    margin: 2em auto;
+    padding: 2em;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+}
+
+.form-container h1 {
+    text-align: center;
+    color: #0077B6; /* Primary Deep Cerulean Blue */
+    margin-bottom: 0.25em;
+}
+
+.form-container p {
+    text-align: center;
+    margin-bottom: 2em;
+    color: #5A6772;
+}
+
+form {
+    display: grid;
+    gap: 1.5em;
+}
+
+fieldset {
+    border: 1px solid #CED4DA;
+    border-radius: 8px;
+    padding: 1.5em;
+    display: grid;
+    gap: 0.8em;
+}
+
+legend {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.2em;
+    color: #343A40;
+    padding: 0 0.5em;
+    margin-left: 0.5em;
+}
+
+label {
+    font-weight: 600;
+    color: #495057;
+}
+
+.required-star {
+    color: #E76F51; /* Darker orange for emphasis */
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.8em;
+    border: 1px solid #CED4DA;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #0077B6;
+    box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.2);
+}
+
+/* Star Rating */
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse; /* This is key for the hover effect */
+    justify-content: flex-end;
+    gap: 0.2em;
+}
+
+.star-rating input[type="radio"] {
+    display: none; /* Hide the actual radio buttons */
+}
+
+.star-rating label {
+    font-size: 2.5em;
+    color: #CED4DA; /* Default star color */
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.star-rating input[type="radio"]:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: #F4A261; /* Accent Warm Orange */
+}
+
+/* Checkbox Group */
+.checkbox-group {
+    display: grid;
+    gap: 0.8em;
+}
+.checkbox-group input[type="checkbox"] {
+    margin-right: 0.5em;
+}
+.checkbox-group label {
+    font-weight: normal;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Submit Button */
+.submit-button {
+    background-color: #0077B6;
+    color: #FFFFFF;
+    border: none;
+    padding: 1em;
+    border-radius: 5px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.2em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+    background-color: #005A8D; /* Darker blue */
+    transform: translateY(-2px);
+}
+
+/* Confirmation Page Styles */
+.confirmation-message {
+    text-align: center;
+}
+.review-counter {
+    margin-top: 2em;
+    padding: 1em;
+    background-color: #F8F9FA;
+    border-radius: 8px;
+    border: 1px solid #E0E0E0;
+}
+.review-counter p {
+    margin: 0;
+    font-size: 1.1em;
+}
+#reviewCount {
+    font-weight: 900;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #0077B6;
+    font-size: 1.3em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .form-container {
+        margin: 1em;
+        padding: 1.5em;
+    }
+    .star-rating label {
+        font-size: 2em;
+    }
+}

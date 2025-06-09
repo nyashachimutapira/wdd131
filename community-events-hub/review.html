@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Hub - Review Submitted</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/site.css">
+    <link rel="stylesheet" href="styles/form.css"> <!-- Reusing form styles for consistency -->
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo">Community Hub</a>
+            <nav class="primary-navigation" id="primary-navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="calendar.html">Events Calendar</a></li>
+                    <li><a href="events.html">Event Listings</a></li>
+                    <li><a href="spotlights.html">Community Spotlights</a></li>
+                    <li><a href="getinvolved.html">Get Involved</a></li>
+                    <li><a href="form.html">Product Review</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="form-container confirmation-message">
+            <h1>Thank You!</h1>
+            <p>Your product review has been successfully submitted.</p>
+            <p>You are making our community better with your feedback.</p>
+            <div class="review-counter">
+                <p>You have submitted <span id="reviewCount">0</span> reviews.</p>
+            </div>
+            <a href="form.html" class="cta-button submit-another-review">Submit Another Review</a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Nyasha Chimutapira |WDD 131| Community Events Hub. All rights reserved.</p>
+            <p><a href="#privacy-policy">Privacy Policy</a> | <a href="#terms-of-service">Terms of Service</a> | <a href="#contact-us">Contact Us</a></p>
+        </div>
+    </footer>
+
+    <script src="js/review.js"></script>
+</body>
+</html>

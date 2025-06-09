@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Hub - Product Review</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/site.css">
+    <link rel="stylesheet" href="styles/form.css"> <!-- Page-specific CSS -->
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo">Community Hub</a>
+            <nav class="primary-navigation" id="primary-navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="calendar.html">Events Calendar</a></li>
+                    <li><a href="events.html">Event Listings</a></li>
+                    <li><a href="spotlights.html">Community Spotlights</a></li>
+                    <li><a href="getinvolved.html">Get Involved</a></li>
+                    <li><a href="form.html" class="active">Product Review</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <h1>Product Review</h1>
+            <p>We value your feedback! Please share your experience with our products.</p>
+            
+            <form action="review.html" method="get">
+                <fieldset>
+                    <legend>Product Information</legend>
+                    <label for="productName">Product Name <span class="required-star">*</span></label>
+                    <select id="productName" name="productName" required>
+                        <option value="" disabled selected>Select a Product ...</option>
+                        <!-- Options will be populated by JavaScript -->
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Your Rating</legend>
+                    <label>Overall Rating <span class="required-star">*</span></label>
+                    <div class="star-rating">
+                        <input type="radio" id="star5" name="rating" value="5" required><label for="star5" title="5 stars">★</label>
+                        <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 stars">★</label>
+                        <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 stars">★</label>
+                        <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 stars">★</label>
+                        <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 star">★</label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Your Experience</legend>
+                    <label for="installationDate">Date of Installation <span class="required-star">*</span></label>
+                    <input type="date" id="installationDate" name="installationDate" required>
+
+                    <label>Useful Features (Check all that apply)</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="featureDurability" name="features" value="durability"><label for="featureDurability">Durability</label>
+                        <input type="checkbox" id="featureEaseOfUse" name="features" value="ease-of-use"><label for="featureEaseOfUse">Ease of Use</label>
+                        <input type="checkbox" id="featurePerformance" name="features" value="performance"><label for="featurePerformance">Performance</label>
+                        <input type="checkbox" id="featureDesign" name="features" value="design"><label for="featureDesign">Design</label>
+                    </div>
+
+                    <label for="writtenReview">Written Review (Optional)</label>
+                    <textarea id="writtenReview" name="writtenReview" rows="6" placeholder="Tell us more about your experience..."></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <legend>About You</legend>
+                    <label for="userName">Your Name (Optional)</label>
+                    <input type="text" id="userName" name="userName" pattern="[A-Za-z\s\-]+" title="Please enter letters, spaces, or hyphens only.">
+                </fieldset>
+
+                <input type="submit" value="Submit Review" class="submit-button">
+            </form>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Nyasha Chimutapira |WDD 131| Community Events Hub. All rights reserved.</p>
+            <p><a href="#privacy-policy">Privacy Policy</a> | <a href="#terms-of-service">Terms of Service</a> | <a href="#contact-us">Contact Us</a></p>
+        </div>
+    </footer>
+
+    <script src="js/form.js"></script>
+</body>
+</html>
