@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Events Hub - Event Listings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/site.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo">Community Hub</a>
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+                <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+                <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+            </button>
+            <nav class="primary-navigation" id="primary-navigation" data-visible="false">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html">Events Calendar</a></li>
+                    <li><a href="event-listings.html" class="active">Event Listings</a></li>
+                    <li><a href="community-spotlights.html">Community Spotlights</a></li>
+                    <li><a href="getinvolved.html">Get Involved</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="event-listings">
+            <div class="container">
+                <h1 class="section-title">All Upcoming Events</h1>
+                <div class="event-filters">
+                    <select id="category-filter">
+                        <option value="all">All Categories</option>
+                        <option value="festival">Festivals & Fairs</option>
+                        <option value="workshop">Workshops</option>
+                        <option value="volunteer">Volunteer Opportunities</option>
+                        <option value="sports">Sports & Recreation</option>
+                    </select>
+                    <input type="text" id="search-events" placeholder="Search events...">
+                </div>
+                <div class="event-grid">
+                    <article class="event-card" id="summer-fair">
+                        <div class="event-image-placeholder">
+                            <img src="images/hub 5.png" alt="Summer Street Fair">
+                        </div>
+                        <div class="event-card-content">
+                            <h3>Summer Street Fair</h3>
+                            <p class="event-date">Saturday, July 20, 2025 | 10:00 AM - 6:00 PM</p>
+                            <p class="event-location">Main Street, Downtown</p>
+                            <p>Join us for a day of fun, music, local vendors, and delicious food at the annual Summer Street Fair! Featuring live performances, kids' activities, and local artisans.</p>
+                            <a href="#" class="learn-more">Register &raquo;</a>
+                        </div>
+                    </article>
+                    <article class="event-card" id="coding-workshop">
+                        <div class="event-image-placeholder">
+                            <img src="images/hub 3.jpg" alt="Tech Workshop">
+                        </div>
+                        <div class="event-card-content">
+                            <h3>Tech Workshop: Intro to Coding</h3>
+                            <p class="event-date">Wednesday, July 24, 2025 | 6:00 PM - 8:00 PM</p>
+                            <p class="event-location">Community Tech Center</p>
+                            <p>Curious about coding? This beginner-friendly workshop will introduce you to the basics of web development. No prior experience needed. Bring your laptop!</p>
+                            <a href="#" class="learn-more">Register Here &raquo;</a>
+                        </div>
+                    </article>
+                    <article class="event-card" id="park-cleanup">
+                        <div class="event-image-placeholder">
+                            <img src="images/hub 4.webp" alt="Community Park Cleanup">
+                        </div>
+                        <div class="event-card-content">
+                            <h3>Community Park Cleanup</h3>
+                            <p class="event-date">Sunday, July 28, 2025 | 9:00 AM - 12:00 PM</p>
+                            <p class="event-location">Riverside Park</p>
+                            <p>Help us keep our local park beautiful. Volunteers of all ages are welcome. We'll provide gloves, bags, and refreshments. Let's make a difference together!</p>
+                            <a href="#" class="learn-more">Sign Up to Volunteer &raquo;</a>
+                        </div>
+                    </article>
+                    <!-- More events would be listed here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Nyasha Chimutapira |WDD 131| Community Events Hub. All rights reserved.</p>
+            <p><a href="#privacy-policy">Privacy Policy</a> | <a href="#terms-of-service">Terms of Service</a> | <a href="#contact-us">Contact Us</a></p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

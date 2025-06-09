@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/site.css">
-    <link rel="stylesheet" href="styles/getinvolved.css"> <!-- Page-specific CSS -->
 </head>
 <body>
     <header class="site-header">
@@ -23,8 +22,8 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="events.html">Events Calendar</a></li>
-                    <li><a href="#event-listings-page">Event Listings</a></li>
-                    <li><a href="#community-spotlights-page">Community Spotlights</a></li>
+                    <li><a href="event-listings.html">Event Listings</a></li>
+                    <li><a href="community-spotlights.html">Community Spotlights</a></li>
                     <li><a href="getinvolved.html" class="active">Get Involved</a></li>
                 </ul>
             </nav>
@@ -32,53 +31,88 @@
     </header>
 
     <main>
-        <section id="page-header-getinvolved">
+        <section id="involvement">
             <div class="container">
-                <h1>Make a Difference: Get Involved!</h1>
-                <p>Our community thrives on participation. Discover how you can contribute and be a part of something special.</p>
+                <h1 class="section-title">Get Involved in Our Community</h1>
+                <p class="text-center">Your participation makes our community stronger. Choose how you'd like to contribute:</p>
+                
+                <div class="involvement-options">
+                    <div class="option" id="submit-event">
+                        <h3>Submit an Event</h3>
+                        <p>Are you organizing a local event? Share it with the community by adding it to our calendar.</p>
+                        <div class="involvement-form">
+                            <h4>Event Submission Form</h4>
+                            <form id="event-form">
+                                <label for="event-name">Event Name</label>
+                                <input type="text" id="event-name" required>
+                                
+                                <label for="event-date">Date & Time</label>
+                                <input type="datetime-local" id="event-date" required>
+                                
+                                <label for="event-location">Location</label>
+                                <input type="text" id="event-location" required>
+                                
+                                <label for="event-description">Description</label>
+                                <textarea id="event-description" required></textarea>
+                                
+                                <label for="event-category">Category</label>
+                                <select id="event-category" required>
+                                    <option value="">Select Category</option>
+                                    <option value="festival">Festival/Fair</option>
+                                    <option value="workshop">Workshop/Class</option>
+                                    <option value="volunteer">Volunteer Opportunity</option>
+                                    <option value="meeting">Community Meeting</option>
+                                    <option value="sports">Sports/Recreation</option>
+                                </select>
+                                
+                                <button type="submit" class="cta-button">Submit Event</button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div class="option" id="volunteer">
+                        <h3>Volunteer Opportunities</h3>
+                        <p>Lend a hand at local events, meet new people, and make a tangible difference in your community.</p>
+                        <div class="volunteer-opportunities">
+                            <h4>Current Volunteer Needs</h4>
+                            <ul>
+                                <li>
+                                    <h5>Summer Street Fair - July 20</h5>
+                                    <p>Setup crew, information booth, activity assistants</p>
+                                    <a href="#" class="learn-more">Sign Up &raquo;</a>
+                                </li>
+                                <li>
+                                    <h5>Community Garden - Weekly</h5>
+                                    <p>Planting, weeding, harvesting (Tuesdays & Saturdays)</p>
+                                    <a href="#" class="learn-more">Sign Up &raquo;</a>
+                                </li>
+                                <li>
+                                    <h5>Food Pantry Distribution - Every Thursday</h5>
+                                    <p>Sorting donations, packing boxes, client assistance</p>
+                                    <a href="#" class="learn-more">Sign Up &raquo;</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="option" id="sponsor">
+                        <h3>Become a Sponsor</h3>
+                        <p>Support the Community Events Hub and help us connect more people. Gain visibility for your organization.</p>
+                        <div class="sponsorship-info">
+                            <h4>Sponsorship Benefits</h4>
+                            <ul>
+                                <li>Logo placement on our website and event materials</li>
+                                <li>Social media features</li>
+                                <li>Recognition at events</li>
+                                <li>Opportunity to distribute promotional materials</li>
+                                <li>Community goodwill and networking</li>
+                            </ul>
+                            <a href="mailto:sponsors@communityhub.org" class="cta-button">Contact Us About Sponsorship</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-
-        <section id="involvement-details">
-            <div class="container">
-                <article class="involvement-section">
-                    <div class="involvement-image">
-                        <img src="images/laptop.avif" alt="Person submitting an event on a laptop">
-                    </div>
-                    <div class="involvement-content">
-                        <h2>Share Your Event with the Community</h2>
-                        <p>Are you organizing a local festival, workshop, meeting, or any other community gathering? Let everyone know! Submitting your event to our hub is easy and helps you reach a wider audience.</p>
-                        <p>We welcome events that are open to the public and contribute positively to our community spirit.</p>
-                        <a href="#submit-form-page" class="cta-button">Submit Your Event Now</a>
-                    </div>
-                </article>
-
-                <article class="involvement-section involvement-section-reverse">
-                    <div class="involvement-image">
-                        <img src="images/group.jpeg" alt="Group of diverse volunteers working together happily">
-                    </div>
-                    <div class="involvement-content">
-                        <h2>Lend a Hand: Volunteer Opportunities</h2>
-                        <p>Volunteering is a rewarding way to give back, meet new people, and develop new skills. We partner with various local organizations and events that need your help.</p>
-                        <p>Opportunities range from event setup and registration to specialized roles based on your skills. Every contribution, big or small, makes a huge impact!</p>
-                        <a href="#volunteer-opportunities-page" class="cta-button">Explore Volunteer Roles</a>
-                    </div>
-                </article>
-
-                <article class="involvement-section">
-                    <div class="involvement-image">
-                        <img src="images/handshake.jpeg" alt="Business handshake signifying sponsorship agreement">
-                    </div>
-                    <div class="involvement-content">
-                        <h2>Support Your Community: Become a Sponsor</h2>
-                        <p>Help us keep the Community Events Hub running and growing! Sponsorship offers a fantastic way for local businesses and organizations to gain visibility while demonstrating their commitment to our community.</p>
-                        <p>We offer various sponsorship levels with a range of benefits. Let's work together to make our community even more vibrant.</p>
-                        <a href="#sponsorship-details-page" class="cta-button">Learn About Sponsorship</a>
-                    </div>
-                </article>
-            </div>
-        </section>
-
     </main>
 
     <footer class="site-footer">
@@ -88,7 +122,6 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script> <!-- Main site script -->
-    <script src="js/getinvolved.js"></script> <!-- Page-specific script -->
+    <script src="js/script.js"></script>
 </body>
 </html>

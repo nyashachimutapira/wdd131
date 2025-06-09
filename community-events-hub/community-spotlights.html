@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Events Hub - Community Spotlights</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/site.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo">Community Hub</a>
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+                <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+                <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+            </button>
+            <nav class="primary-navigation" id="primary-navigation" data-visible="false">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html">Events Calendar</a></li>
+                    <li><a href="event-listings.html">Event Listings</a></li>
+                    <li><a href="community-spotlights.html" class="active">Community Spotlights</a></li>
+                    <li><a href="getinvolved.html">Get Involved</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="spotlights">
+            <div class="container">
+                <h1 class="section-title">Community Spotlights</h1>
+                <div class="spotlight-grid">
+                    <article class="spotlight-card" id="food-pantry">
+                        <div class="spotlight-image-placeholder">
+                            <img src="images/hub 6.png" alt="The Local Food Pantry">
+                        </div>
+                        <div class="spotlight-card-content">
+                            <h3>The Local Food Pantry</h3>
+                            <p class="spotlight-meta">Serving the community since 2010</p>
+                            <p>The Local Food Pantry has been a cornerstone of our community for over a decade, providing essential food supplies to families in need. What started as a small church initiative has grown into a community-wide effort serving over 500 families each month.</p>
+                            <p>Their mission: "No one in our community should go to bed hungry." Through partnerships with local farms, grocery stores, and volunteers, they distribute fresh produce, pantry staples, and prepared meals.</p>
+                            <p>Get involved: Volunteer opportunities are available every Tuesday and Thursday. Food donations can be dropped off at their Main Street location.</p>
+                            <a href="#" class="learn-more">Visit Website &raquo;</a>
+                        </div>
+                    </article>
+                    <article class="spotlight-card" id="christalia">
+                        <div class="spotlight-image-placeholder">
+                            <img src="images/christalia.jpg" alt="Christalia Shumba">
+                        </div>
+                        <div class="spotlight-card-content">
+                            <h3>Christalia Shumba: Volunteer of the Year</h3>
+                            <p class="spotlight-meta">Community Champion since 2018</p>
+                            <p>This year's Volunteer of the Year award goes to Christalia Shumba, whose tireless efforts have made a significant impact across multiple community organizations.</p>
+                            <p>Christalia dedicates over 20 hours each week to various causes including the Food Pantry, Youth Mentorship Program, and Community Garden Initiative. Her "Clean Streets Project" mobilized over 200 volunteers last year to beautify neighborhood streets.</p>
+                            <p>"I believe in the power of community," says Christalia. "When we come together, we can create real change right where we live."</p>
+                            <a href="#" class="learn-more">Read Full Interview &raquo;</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="nomination-section">
+                    <h2>Nominate a Community Hero</h2>
+                    <p>Know someone making a difference in our community? Nominate them for our next Community Spotlight!</p>
+                    <a href="getinvolved.html" class="cta-button-secondary">Submit Nomination</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Nyasha Chimutapira |WDD 131| Community Events Hub. All rights reserved.</p>
+            <p><a href="#privacy-policy">Privacy Policy</a> | <a href="#terms-of-service">Terms of Service</a> | <a href="#contact-us">Contact Us</a></p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
